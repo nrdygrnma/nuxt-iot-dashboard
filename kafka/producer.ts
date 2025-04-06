@@ -22,7 +22,6 @@ const run = async () => {
       topic: "sensor-readings",
       messages: [{ value: JSON.stringify(message) }],
     });
-    console.log("Produced: ", message);
   }, 3000);
 };
 

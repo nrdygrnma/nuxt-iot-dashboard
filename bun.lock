@@ -4,6 +4,7 @@
     "": {
       "name": "nuxt-app",
       "dependencies": {
+        "@nuxt/icon": "1.11.0",
         "@nuxt/ui": "3.0.2",
         "@pinia/nuxt": "^0.10.1",
         "echarts": "^5.5.1",
@@ -16,6 +17,9 @@
         "vue-router": "^4.5.0",
       },
       "devDependencies": {
+        "@iconify-json/bi": "^1.2.2",
+        "@iconify-json/eos-icons": "^1.2.2",
+        "@iconify-json/lucide": "^1.2.34",
         "prettier": "^3.5.3",
       },
     },
@@ -148,6 +152,12 @@
     "@floating-ui/utils": ["@floating-ui/utils@0.2.9", "", {}, "sha512-MDWhGtE+eHw5JW7lq4qhc5yRLS11ERl1c7Z6Xd0a58DozHES6EnNNwUWbMiG4J9Cgj053Bhk8zvlhFYKVhULwg=="],
 
     "@floating-ui/vue": ["@floating-ui/vue@1.1.6", "", { "dependencies": { "@floating-ui/dom": "^1.0.0", "@floating-ui/utils": "^0.2.9", "vue-demi": ">=0.13.0" } }, "sha512-XFlUzGHGv12zbgHNk5FN2mUB7ROul3oG2ENdTpWdE+qMFxyNxWSRmsoyhiEnpmabNm6WnUvR1OvJfUfN4ojC1A=="],
+
+    "@iconify-json/bi": ["@iconify-json/bi@1.2.2", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-f/Wm+RTdBosw3cI/gmg5uSFmdumkw2thUk4qVFS56jTerdal6wqWnWAbRTSJJ/vhH9/y16pRKnvE8F2+M23dzw=="],
+
+    "@iconify-json/eos-icons": ["@iconify-json/eos-icons@1.2.2", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-kYfV1WfgiHDbWdG9JEbV1K77MvksRmo9KIM4VjtYFMnF8pKqTv4MoLIOdCD2lbRlhBZspxr1GKde5Z/LYqz3Qw=="],
+
+    "@iconify-json/lucide": ["@iconify-json/lucide@1.2.34", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-6xiITvlYP/5d6KQPRBHDQ+eaLxRWiTvXfuVGuNX2ahNLbEi0VKB04v008IQLPrMu/C4tRMI4+sRzHd/wSFxGZQ=="],
 
     "@iconify/collections": ["@iconify/collections@1.0.534", "", { "dependencies": { "@iconify/types": "*" } }, "sha512-c50uAmXmiRSYEP6vXyfQG5uQtJVL0Vm6S2KFcbfw/7fByDM2SBnWQNH+/smXq/bZXVT0CdJr2Nsct+FDdqqKuA=="],
 

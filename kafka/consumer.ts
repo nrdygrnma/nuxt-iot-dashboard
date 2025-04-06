@@ -1,11 +1,13 @@
 import { Kafka } from "kafkajs";
-import { addSensorReading } from "~/server/utils/sensorStore";
+import { addSensorReading } from "~/server/utils/sensorMemory";
+import type { SensorData } from "~/types";
 
 export const startConsumer = async () => {
   const kafka = new Kafka({
     clientId: "nuxt-consumer",
     brokers: ["localhost:29092"],
   });
+
   const consumer = kafka.consumer({ groupId: "iot-dashboard-group" });
 
   await consumer.connect();
@@ -14,12 +16,16 @@ export const startConsumer = async () => {
   await consumer.run({
     eachMessage: async ({ message }) => {
       const value = message.value?.toString();
-      console.log("📥 Received from Kafka:", value);
       if (value) {
-        const parsedData = JSON.parse(value);
-        addSensorReading(parsedData);
+        try {
+          const parsedData: SensorData = JSON.parse(value);
+          addSensorReading(parsedData);
+        } catch (err) {
+          console.error("❌ Failed to parse Kafka message:", err);
+        }
       }
     },
   });
-  console.log("Kafka consumer started");
+
+  console.log("✅ Kafka consumer started");
 };

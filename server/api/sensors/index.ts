@@ -1,7 +1,6 @@
-import { sensorData } from "~/server/utils/sensorStore";
+import { sensorMemory } from "~/server/utils/sensorMemory";
 
 export default defineEventHandler(() => {
-  console.log("📡 Returning sensorData:", sensorData);
-
-  return sensorData;
+  console.log("📡 Returning sensorMemory:", sensorMemory);
+  return sensorMemory;
 });
