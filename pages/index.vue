@@ -34,7 +34,6 @@
       </div>
 
       <div class="p-4">
-        <h2 class="text-lg font-semibold mb-2">Latest Temperatures</h2>
         <ClientOnly>
           <ChartTemperature />
         </ClientOnly>

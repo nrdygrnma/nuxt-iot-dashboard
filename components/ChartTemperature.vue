@@ -20,13 +20,15 @@ const option = computed<ECOption>(() => {
   return {
     title: {
       text: "Temperature (Last 10)",
-      left: "center",
+      class: "text-2xl text-pink-500",
+      left: "left",
       textStyle: {
-        fontSize: 14,
+        fontSize: 16,
       },
     },
     tooltip: {
       trigger: "axis",
+      crosshair: true,
     },
     xAxis: {
       type: "category",
