@@ -14,7 +14,7 @@ const run = async () => {
     const message = {
       deviceId: "sensor-001",
       type: "temperature",
-      value: +(20 + Math.random() * 100).toFixed(2),
+      value: +(20 + Math.random() * 10).toFixed(2),
       timestamp: new Date().toISOString(),
     };
 
@@ -23,7 +23,7 @@ const run = async () => {
       messages: [{ value: JSON.stringify(message) }],
     });
     console.log("Produced: ", message);
-  }, 2000);
-
-  await run();
+  }, 3000);
 };
+
+await run();
